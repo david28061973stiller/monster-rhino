@@ -738,6 +738,26 @@ footer p {
   line-height: 1;
 }
 
+.legal-button {
+  flex-direction: row;
+  gap: 7px;
+  white-space: nowrap;
+}
+
+.legal-button span {
+  position: relative;
+  z-index: 2;
+}
+
+.legal-button span + span::before {
+  content: "|";
+  margin-right: 7px;
+  color: rgba(137, 198, 255, .9);
+  font-family: CutiveLocal, Georgia, serif;
+  font-size: .72em;
+  vertical-align: .08em;
+}
+
 .legal-nav a:hover,
 .legal-nav a:focus-visible {
   color: #74b6ff;
@@ -998,10 +1018,11 @@ footer img {
     right: auto;
     bottom: auto;
     grid-column: 1 / -1;
-    justify-self: end;
-    width: min(360px, 74%);
+    justify-self: center;
+    width: min(430px, 100%);
     max-height: none;
-    margin-top: -8px;
+    margin-top: -30px;
+    margin-bottom: -30px;
     object-position: bottom right;
   }
 
@@ -1052,15 +1073,29 @@ footer img {
 }
 
 @media (max-width: 560px) {
-  .top-buttons,
   .contact {
     grid-template-columns: 1fr;
   }
 
   .top-buttons {
-    gap: 10px;
-    padding-right: 18px;
-    padding-left: 18px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+    padding: 12px 10px 0;
+  }
+
+  .top-buttons .site-button {
+    min-height: 52px;
+    padding: 8px 5px 7px;
+  }
+
+  .top-buttons .button-kicker {
+    margin-bottom: 1px;
+    font-size: 9px;
+  }
+
+  .top-buttons .button-title {
+    font-size: clamp(15px, 4.2vw, 18px);
+    line-height: .95;
   }
 
   .site-button {
@@ -1097,18 +1132,25 @@ footer img {
   }
 
   .rhino-main {
-    width: min(280px, 72vw);
-    margin-top: 16px;
+    align-self: center;
+    width: min(314px, 80vw);
+    flex-shrink: 0;
+    margin-top: 2px;
+    margin-bottom: 8px;
   }
 
   .rhino-views {
     width: 100%;
-    justify-content: center;
-    margin-top: 6px;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: 0;
   }
 
   .rhino-views img {
-    height: clamp(104px, 27vw, 136px);
+    width: calc((100% - 16px) / 3);
+    height: auto;
+    max-height: 132px;
+    object-fit: contain;
   }
 
   .flight-video {
@@ -1139,13 +1181,13 @@ footer img {
   }
 
   .features {
-    margin: 22px 0;
+    margin: 14px 0 4px;
   }
 
   .product-photo {
     position: static;
-    width: 78%;
-    margin-left: auto;
+    width: 100%;
+    margin: -12px auto -24px;
   }
 
   .benefits {
@@ -1153,6 +1195,12 @@ footer img {
     gap: 22px 14px;
     padding-right: 18px;
     padding-left: 18px;
+  }
+
+  .benefit-materials {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(180px, 60%);
   }
 
   .benefits img {
@@ -1269,6 +1317,22 @@ footer img {
 }
 
 @media (max-width: 380px) {
+  .top-buttons {
+    gap: 5px;
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+
+  .top-buttons .site-button {
+    min-height: 50px;
+    padding-right: 4px;
+    padding-left: 4px;
+  }
+
+  .top-buttons .button-title {
+    font-size: 14px;
+  }
+
   .button-title {
     font-size: 23px;
   }
@@ -1286,7 +1350,13 @@ footer img {
   }
 
   .rhino-main {
-    width: min(258px, 70vw);
+    width: min(292px, 78vw);
+    margin-top: 0;
+    margin-bottom: 6px;
+  }
+
+  .rhino-views img {
+    max-height: 116px;
   }
 
   .benefits h3 {
@@ -1299,5 +1369,13 @@ footer img {
 
   .legal-nav a {
     font-size: 18px;
+  }
+
+  .legal-button {
+    gap: 5px;
+  }
+
+  .legal-button span + span::before {
+    margin-right: 5px;
   }
 }
