@@ -880,6 +880,240 @@ footer img {
   text-transform: uppercase;
 }
 
+.briefing-page {
+  min-width: 320px;
+  background: #02061b;
+  color: var(--ink);
+  font-family: CutiveLocal, Georgia, serif;
+}
+
+.briefing-document {
+  width: min(100%, 920px);
+  margin: 0 auto;
+  padding: 22px 18px 40px;
+}
+
+.briefing-back {
+  margin-bottom: 18px;
+}
+
+.briefing-sheet {
+  position: relative;
+  min-height: 1286px;
+  margin: 0 auto 26px;
+  padding: 48px 56px 108px 214px;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(0, 20, 86, .08), rgba(0, 12, 58, .4)),
+    url("../assets/background/Hintergrund.webp") top center / 1120px auto repeat-y,
+    #051b85;
+  border: 1px solid rgba(95, 155, 255, .28);
+  box-shadow: 0 0 28px rgba(46, 108, 255, .24);
+}
+
+.briefing-sheet::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(0, 9, 48, .18), transparent 40%, rgba(0, 9, 48, .2)),
+    radial-gradient(circle at 50% 36%, rgba(58, 129, 255, .2), transparent 36%);
+  pointer-events: none;
+}
+
+.briefing-header,
+.briefing-text,
+.briefing-toc,
+.briefing-note,
+.briefing-footer {
+  position: relative;
+  z-index: 1;
+}
+
+.briefing-header {
+  display: grid;
+  grid-template-columns: 142px minmax(0, 1fr);
+  align-items: center;
+  gap: 24px;
+  margin-left: -180px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, .82);
+}
+
+.briefing-header img {
+  width: 138px;
+  filter: drop-shadow(0 0 14px rgba(0, 0, 0, .65));
+}
+
+.briefing-header h1 {
+  margin: 0;
+  font-size: clamp(38px, 5.45vw, 52px);
+  line-height: .96;
+  letter-spacing: .02em;
+  white-space: nowrap;
+}
+
+.briefing-header h1 span {
+  color: #0799e7;
+}
+
+.briefing-index .briefing-header h1 {
+  font-size: clamp(38px, 5.45vw, 52px);
+}
+
+.briefing-toc {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.briefing-toc li {
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 14px;
+  color: #fff;
+  font-family: AntonLocal, Impact, sans-serif;
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: .13em;
+}
+
+.briefing-toc span {
+  color: #0799e7;
+  letter-spacing: .04em;
+}
+
+.briefing-text {
+  max-width: 620px;
+  margin-top: 18px;
+}
+
+.briefing-text p {
+  margin: 0 0 18px;
+  font-size: 20px;
+  line-height: 1.3;
+  letter-spacing: .08em;
+  text-shadow: 0 0 8px rgba(0, 0, 0, .85);
+}
+
+.briefing-text h2 {
+  margin: 22px 0 10px;
+  color: #fff;
+  font-family: AntonLocal, Impact, sans-serif;
+  font-size: 27px;
+  line-height: 1;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, .85);
+}
+
+.briefing-text strong {
+  color: #fff;
+  font-family: AntonLocal, Impact, sans-serif;
+  font-size: 28px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.briefing-text mark {
+  padding: 0;
+  background: transparent;
+  color: #0799e7;
+}
+
+.briefing-list {
+  margin: 0 0 16px;
+  padding-left: 26px;
+}
+
+.briefing-list li {
+  margin: 0 0 8px;
+  font-size: 18px;
+  line-height: 1.26;
+  letter-spacing: .08em;
+  text-shadow: 0 0 8px rgba(0, 0, 0, .85);
+}
+
+.briefing-compact p {
+  margin-bottom: 13px;
+  font-size: 18px;
+  line-height: 1.24;
+}
+
+.briefing-compact h2 {
+  margin-top: 16px;
+  font-size: 23px;
+}
+
+.briefing-compact .briefing-list li {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.briefing-note {
+  max-width: 620px;
+  margin-top: 16px;
+  margin-bottom: 14px;
+  padding: 14px 18px 16px;
+  border: 3px solid #071467;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .94);
+  color: #071467;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, .94);
+}
+
+.briefing-note h2 {
+  margin: 0 0 10px;
+  font-family: CutiveLocal, Georgia, serif;
+  font-size: 20px;
+  letter-spacing: .34em;
+}
+
+.briefing-note p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.32;
+  letter-spacing: .18em;
+}
+
+.briefing-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 128px 12px 214px;
+  background: rgba(255, 255, 255, .95);
+  color: #071467;
+  font-size: 11px;
+  line-height: 1.05;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.briefing-footer-title {
+  display: block;
+  text-align: center;
+}
+
+.briefing-footer-meta {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.briefing-footer-meta span + span::before {
+  content: "|";
+  margin-right: 10px;
+}
+
 @media (max-width: 980px) {
   .hero {
     display: flex;
@@ -1313,6 +1547,104 @@ footer img {
   .legal-document p,
   .legal-document li {
     font-size: 15px;
+  }
+
+  .briefing-document {
+    padding: 14px 10px 28px;
+  }
+
+  .briefing-sheet {
+    min-height: auto;
+    padding: 28px 22px 72px;
+  }
+
+  .briefing-header {
+    grid-template-columns: 70px minmax(0, 1fr);
+    gap: 12px;
+    margin-left: 0;
+    padding-bottom: 12px;
+  }
+
+  .briefing-header img {
+    width: 70px;
+  }
+
+  .briefing-header h1,
+  .briefing-index .briefing-header h1 {
+    font-size: clamp(23px, 8.4vw, 36px);
+    white-space: nowrap;
+  }
+
+  .briefing-toc li {
+    grid-template-columns: 44px 1fr;
+    gap: 10px;
+    margin-bottom: 17px;
+    font-size: clamp(23px, 7.2vw, 32px);
+    letter-spacing: .08em;
+  }
+
+  .briefing-text p {
+    margin-bottom: 14px;
+    font-size: clamp(15px, 4.4vw, 18px);
+    line-height: 1.24;
+    letter-spacing: .05em;
+  }
+
+  .briefing-text h2 {
+    margin: 16px 0 8px;
+    font-size: clamp(20px, 6vw, 25px);
+    letter-spacing: .08em;
+  }
+
+  .briefing-text strong {
+    font-size: clamp(21px, 6.5vw, 27px);
+    letter-spacing: .08em;
+  }
+
+  .briefing-list {
+    padding-left: 20px;
+  }
+
+  .briefing-list li,
+  .briefing-compact .briefing-list li {
+    margin-bottom: 6px;
+    font-size: clamp(14px, 4vw, 17px);
+    line-height: 1.22;
+    letter-spacing: .05em;
+  }
+
+  .briefing-compact p {
+    font-size: clamp(14px, 4vw, 17px);
+  }
+
+  .briefing-note {
+    border-width: 2px;
+    border-radius: 14px;
+  }
+
+  .briefing-note h2 {
+    font-size: 16px;
+    letter-spacing: .22em;
+  }
+
+  .briefing-note p {
+    font-size: 12px;
+    letter-spacing: .12em;
+  }
+
+  .briefing-footer {
+    gap: 4px;
+    padding: 9px 16px 10px;
+    font-size: 8px;
+    letter-spacing: .07em;
+  }
+
+  .briefing-footer-meta {
+    gap: 5px;
+  }
+
+  .briefing-footer-meta span + span::before {
+    margin-right: 5px;
   }
 }
 
