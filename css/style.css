@@ -795,7 +795,7 @@ footer p {
   position: relative;
   z-index: 3;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: .95fr 1.05fr .85fr 1.25fr;
   gap: 14px;
   width: calc(100% - 68px);
   margin: 18px auto 26px;
@@ -804,7 +804,7 @@ footer p {
 .legal-nav a {
   min-height: 56px;
   padding: 10px 12px;
-  font-size: 19px;
+  font-size: 17px;
   line-height: 1;
 }
 
@@ -1370,6 +1370,14 @@ footer img {
     grid-column: 1 / -1;
     justify-content: center;
     transform: none;
+  }
+
+  .legal-nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .legal-nav a {
+    font-size: 19px;
   }
 }
 
