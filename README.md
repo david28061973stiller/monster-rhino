@@ -27,3 +27,8 @@ The counterweight calculator has been removed.
 Unused Rotor original photographs omitted. Retouched photos converted to WebP at original dimensions, quality 92.
 
 No remote commit, push or deployment was performed.
+
+## Approved landing-page update
+One responsive Powered by VPforce strip spans both product cards. The supplied VPforce logo is preserved in the badge.
+
+Upload all extracted contents into the repository root. Do not upload this ZIP as a website asset. Preserve existing hosting configuration such as CNAME.
