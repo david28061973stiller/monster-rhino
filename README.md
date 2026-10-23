@@ -32,3 +32,6 @@ No remote commit, push or deployment was performed.
 One responsive Powered by VPforce strip spans both product cards. The supplied VPforce logo is preserved in the badge.
 
 Upload all extracted contents into the repository root. Do not upload this ZIP as a website asset. Preserve existing hosting configuration such as CNAME.
+
+## Update 2026-10-23
+Added the approved no-power-switch / no-emergency-stop notice to both assembly guides and the power supply details. Disconnect motor power when not in use.
